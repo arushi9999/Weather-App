@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sky_blue"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:text="Search"
+        app:layout_constraintStart_toEndOf="@+id/editText"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/quote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
+        android:text="Welcome to Arushi's weather App. "
+        android:textColor="@color/white"
+        android:textSize="13dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/mainTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="148dp"
+        android:text="---"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/mainTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="---"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainImage" />
+
+    <ImageView
+        android:id="@+id/mainImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="188dp"
+        android:background="@color/aqua_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/image1"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/aqua_blue"
+        app:layout_constraintEnd_toStartOf="@+id/image2"
+        app:layout_constraintTop_toTopOf="@+id/image2"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/image2"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="24dp"
+        android:background="@color/aqua_blue"
+        app:layout_constraintBottom_toBottomOf="@+id/image3"
+        app:layout_constraintEnd_toStartOf="@+id/image3"
+        app:layout_constraintTop_toBottomOf="@+id/mainTime"
+        app:layout_constraintVertical_bias="1.0"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/image3"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="204dp"
+        android:layout_marginTop="68dp"
+        android:background="@color/aqua_blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainTime"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/image4"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="20dp"
+        android:background="@color/aqua_blue"
+        app:layout_constraintStart_toEndOf="@+id/image3"
+        app:layout_constraintTop_toTopOf="@+id/image3"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/time1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="-"
+        android:textColor="@color/grey"
+        app:layout_constraintBottom_toTopOf="@+id/high1"
+        app:layout_constraintStart_toStartOf="@+id/image1" />
+
+    <TextView
+        android:id="@+id/time2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="--"
+        android:textColor="@color/grey"
+        app:layout_constraintBottom_toTopOf="@+id/high2"
+        app:layout_constraintStart_toStartOf="@+id/image2" />
+
+    <TextView
+        android:id="@+id/high1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="High:"
+        android:textColor="@color/grey"
+        app:layout_constraintBottom_toTopOf="@+id/image1"
+        app:layout_constraintStart_toStartOf="@+id/image1" />
+
+    <TextView
+        android:id="@+id/high2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="High:"
+        android:textColor="@color/grey"
+        app:layout_constraintBottom_toTopOf="@+id/image2"
+        app:layout_constraintStart_toStartOf="@+id/image2" />
+
+    <TextView
+        android:id="@+id/low1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Low:"
+        android:textColor="@color/grey"
+        app:layout_constraintStart_toStartOf="@+id/image1"
+        app:layout_constraintTop_toBottomOf="@+id/image1" />
+
+    <TextView
+        android:id="@+id/low2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Low:"
+        android:textColor="@color/grey"
+        app:layout_constraintStart_toStartOf="@+id/image2"
+        app:layout_constraintTop_toBottomOf="@+id/image2" />
+
+    <TextView
+        android:id="@+id/time3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="--"
+        android:textColor="@color/grey"
+        app:layout_constraintBottom_toTopOf="@+id/high3"
+        app:layout_constraintStart_toStartOf="@+id/image3" />
+
+    <TextView
+        android:id="@+id/high3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="High:"
+        android:textColor="@color/grey"
+        app:layout_constraintBottom_toTopOf="@+id/image3"
+        app:layout_constraintStart_toStartOf="@+id/image3" />
+
+    <TextView
+        android:id="@+id/low3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Low"
+        android:textColor="@color/grey"
+        app:layout_constraintStart_toStartOf="@+id/image3"
+        app:layout_constraintTop_toBottomOf="@+id/image3" />
+
+    <TextView
+        android:id="@+id/low4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Low:"
+        android:textColor="@color/grey"
+        app:layout_constraintStart_toStartOf="@+id/image4"
+        app:layout_constraintTop_toBottomOf="@+id/image4" />
+
+    <TextView
+        android:id="@+id/time4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="--"
+        android:textColor="@color/grey"
+        app:layout_constraintBottom_toTopOf="@+id/high4"
+        app:layout_constraintStart_toStartOf="@+id/image4" />
+
+    <TextView
+        android:id="@+id/high4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="High:"
+        android:textColor="@color/grey"
+        app:layout_constraintBottom_toTopOf="@+id/image4"
+        app:layout_constraintStart_toStartOf="@+id/image4" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:background="@color/teal_700"
+        android:textStyle="bold"
+        android:text="Based on Rick and Morty"
+        android:textColor="@color/grey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:textAllCaps="false" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
